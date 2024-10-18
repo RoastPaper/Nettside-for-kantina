@@ -1,14 +1,27 @@
-.header {
-    padding: 20px;
-    text-align: center; 
-    background: whitesmoke; 
-    color: black; 
-}
-
-.header h1 {
-    font-size: 40px;
-}
-
 body {
+    height: 100%;
+    margin: 0;
     background-color: #FFC37C;
 }
+
+.hero-image {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("bilder/green-goddess-sandwiches-healthy-lunch-recipes-6552ad3197eef.avif"); /* Her legger det er bilde i bakgrunnen til siden og jeg har puttet inn en mørk farge som gjøre at bilden blir mørkere. */
+    background-repeat: repeat-x; /* Her gjør at bildet repteres seg ved x-aksen til siden. */
+    height: 825px; /* Her bestemmer jeg størrelsen til bildet */
+    background-position: center; /* Bildet blir mer på mitten */
+    position: relative; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-text {
+    text-align: center;
+    color: white;
+    font-size: 40px;
+
+}
+
+/* body {
+    background-color: #FFC37C;
+} */
