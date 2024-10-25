@@ -16,12 +16,12 @@ body {
 }
 
 .meny-bakgrunn {
-    position: absolute;
-    top: 0;
+    position: absolute; /* Dette gjør at hero-text ikke komme seg helt til høyre på siden */
+    top: 0; /* Det gjør st bildet er helt på toppen */
 }
 
 .buttonhover {
-    position: absolute; /* Dette gjør at det blir toppen til venstre i bildet og som jeg sagt i de forrige komertaene */
+    position: absolute; /* Dette gjør at det blir en link toppen til venstre i bildet og som jeg sagt i de forrige komertaene */
     top: 20px;
     left: 20px;
     color: white;
