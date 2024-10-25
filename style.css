@@ -9,19 +9,37 @@ body {
     background-repeat: repeat-x; /* Her gjør at bildet repteres seg ved x-aksen til siden. */
     height: 825px; /* Her bestemmer jeg størrelsen til bildet */
     background-position: center; /* Bildet blir mer på mitten */
-    position: relative; 
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative; /* Dette er viktig for knappen skal være toppen til venstre med hjelp av position: absolute i .buttonhover */
+}
+
+.meny-bakgrunn {
+    position: absolute;
+    top: 0;
+}
+
+.buttonhover {
+    position: absolute; /* Dette gjør at det blir toppen til venstre i bildet og som jeg sagt i de forrige komertaene */
+    top: 20px;
+    left: 20px;
+    color: white;
+    font-size: 40px;
+    
+}
+
+/* Dette gjør at når du har musen over knappen vil du se det endre bakgrunnen til oransje */
+.buttonhover:hover {  
+    background-color: #FFC37C;
+    color: white;
 }
 
 .hero-text {
-    text-align: center;
     color: white;
     font-size: 40px;
-
 }
 
-/* body {
-    background-color: #FFC37C;
-} */
+.hero-text h1 {
+    text-align: center;
+}
