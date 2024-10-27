@@ -6,13 +6,13 @@ body {
 
 .hero-image {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("bilder/green-goddess-sandwiches-healthy-lunch-recipes-6552ad3197eef.avif"); /* Her legger det er bilde i bakgrunnen til siden og jeg har puttet inn en mørk farge som gjøre at bilden blir mørkere. */
-    background-repeat: repeat-x; /* Her gjør at bildet repteres seg ved x-aksen til siden. */
+    background-repeat: repeat-x; /* Her gjør at bildet repteres seg ved x-aksen til sidene av bildet. */
     height: 825px; /* Her bestemmer jeg størrelsen til bildet */
     background-position: center; /* Bildet blir mer på mitten */
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative; /* Dette er viktig for knappen skal være toppen til venstre med hjelp av position: absolute i .buttonhover */
+    position: relative; /* Dette er viktig for knappen skal være toppen til venstre med hjelp av position: absolute i .buttonhover og for .meny-bakgrunn*/
 }
 
 .meny-bakgrunn {
@@ -29,7 +29,7 @@ body {
     
 }
 
-/* Dette gjør at når du har musen over knappen vil du se det endre bakgrunnen til oransje */
+/* Dette gjør at når du har musen over knappen vil du se det endre bakgrunnen til oransje. */
 .buttonhover:hover {  
     background-color: #FFC37C;
     color: white;
@@ -42,4 +42,24 @@ body {
 
 .hero-text h1 {
     text-align: center;
+}
+
+.nederst-bakgrunn {
+    top: 175px;
+    transform: rotate(180deg);
+    position: absolute;
+}
+
+.article {
+    margin: 40px;
+    background-color: white;
+}
+
+.article h2 {
+    padding: 20px;
+}
+
+.article p {
+    padding: 20px;
+    font-size: 20px;
 }
