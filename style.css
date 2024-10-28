@@ -51,15 +51,15 @@ body {
 }
 
 .article {
-    margin: 40px;
+    margin: 50px;
     background-color: white;
 }
 
 .article h2 {
-    padding: 20px;
+    padding: 10px;
 }
 
 .article p {
-    padding: 20px;
+    padding: 10px;
     font-size: 20px;
 }
