@@ -63,3 +63,22 @@ body {
     padding: 10px;
     font-size: 20px;
 }
+
+.link {
+    margin: 0px auto;
+    text-align: center;
+}
+
+a.link {
+    display: block;
+}
+
+.button {
+    color: black;
+    font-size: 40px;
+}
+
+.button:hover{
+    background-color: #FFC37C;
+    color: black;
+}
