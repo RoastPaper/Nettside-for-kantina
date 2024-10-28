@@ -86,7 +86,8 @@ a.link {
 
 footer {
     background-color: orange;
-    border: white;
+    color: white;
     font-size: 20px;
-    padding: 20px;
+    padding: 10px;
+    text-align: center;
 }
