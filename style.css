@@ -22,6 +22,7 @@ body {
 
 .buttonhover {
     position: absolute; /* Dette gjør at det blir en link toppen til venstre i bildet og som jeg sagt i de forrige komertaene */
+    justify-content: space-evenly;
     top: 20px;
     left: 20px;
     color: white;
@@ -81,4 +82,11 @@ a.link {
 .button:hover{
     background-color: #FFC37C;
     color: black;
+}
+
+footer {
+    background-color: orange;
+    border: white;
+    font-size: 20px;
+    padding: 20px;
 }
