@@ -20,14 +20,68 @@ body {
     top: 0; /* Det gjør st bildet er helt på toppen */
 }
 
-.buttonhover {
+.menu {
     position: absolute; /* Dette gjør at det blir en link toppen til venstre i bildet og som jeg sagt i de forrige komertaene */
-    justify-content: space-evenly;
-    top: 20px;
+    top: 15px;
     left: 20px;
     color: white;
     font-size: 40px;
-    
+    cursor: pointer;
+}
+
+.bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #f1af5f;
+    margin: 8px;
+    transition: 0.4s;
+}
+
+.bar1:hover, .bar2:hover, .bar3:hover {
+    background-color: #f5b668;
+}
+
+.dropdown {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color:#f5b668;
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.5s;
+}
+
+.dropdown img {
+    margin: 8px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #FFC37C;
+}
+
+.dropdown a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 40px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+}
+
+.dropdown a:hover {
+    color: #FFC37C;
+}
+
+#main {
+    transition: margin-left .5s;
+    padding: 20px;
+}
+
+@media screen and (max-height: 450px) {
+    .dropdown {padding-top: 15px;}
+    .dropdown a {font-size: 18px;}
 }
 
 /* Dette gjør at når du har musen over knappen vil du se det endre bakgrunnen til oransje. */
@@ -83,6 +137,8 @@ a.link {
     background-color: #FFC37C;
     color: black;
 }
+
+.container {}
 
 footer {
     background-color: orange;

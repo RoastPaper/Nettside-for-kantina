@@ -3,23 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menyen</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Nettside for kantina</title>
+    <link rel="stylesheet" href="style.css"> <!-- Her har jeg koblet til CSS for at programet koble sammen med HTML -->
 </head>
 <body>
-    <header class="header">
+    <header>
         <div>
             <img src="bilder/Toppen for nettsiden-2.png" width="1440" class=meny-bakgrunn> <!-- Her bruker jeg width for å gjør bildet mer mindre enn det var og lagde en class for å plassere det rikitg og ikke påvirke tekster innenfor hero-image -->
-            <a class="buttonhover" href="index.html">Tilbake</a>
+            <menu>
+                <div class="menu" onclick="menuFunction()">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </div>
+                <div id="dropdownID" class="dropdown">
+                    <img src="bilder/akademiet_oransje_rgb-1000x398.png" width="175px">
+                    <a href="index.html">Hjem</a>
+                    <a href="meny.html">Meny</a>
+                    <a href="varer.html">Varer</a>
+                </div>
+                <div id="main">
+                </div>
+            </menu>
         </div>
+        <img src="bilder/Toppen for nettsiden.png" width="1440" class="nederst-bakgrunn">
     </header>
     <article class="article">
-       
+
     </article>
     <footer>
-
+        <div>
+            <h2>Kontakt oss:</h2>
+            <p>Gmail: william.haaje@gmail.com</p>
+            <p>Telefon: 41072972</p>
+        </div>
+        <div>
+            <h2>Lenkene til sidene:</h2>
+            <a href="index.html">Hjemsiden</a>
+            <a href="meny.html">Meny</a>
+            <a href="varer.html">Varer</a>
+        </div>
     </footer>
 
-    <script src="funksjoner.js"></script>
+    <script src="funksjoner.js"></script> <!-- Her har jeg koblet til Javascript for at programet koble sammen med HTML -->
 </body>
 </html>
