@@ -29,7 +29,7 @@ body {
     cursor: pointer;
 }
 
-.bar1, .bar2, .bar3 {
+.bar1, .bar2, .bar3 { /* Dette lager tre strekker på toppen til venstre har en transition som gj */
     width: 35px;
     height: 5px;
     background-color: #f1af5f;
@@ -58,7 +58,6 @@ body {
     margin: 8px;
     text-decoration: none;
     font-size: 20px;
-    color: #FFC37C;
 }
 
 .dropdown a {
@@ -74,14 +73,15 @@ body {
     color: #FFC37C;
 }
 
-#main {
+#main { /* Dette gjør transformeringen smooth og ikke hakkete  */
     transition: margin-left .5s;
     padding: 20px;
 }
 
-@media screen and (max-height: 450px) {
+@media screen and (max-height: 450px) { /* Dette gjør at den tilpasser for de som har små skjermer */
     .dropdown {padding-top: 15px;}
     .dropdown a {font-size: 18px;}
+    .dropdown img {font-size: 2px;}
 }
 
 /* Dette gjør at når du har musen over knappen vil du se det endre bakgrunnen til oransje. */
