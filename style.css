@@ -138,7 +138,16 @@ a.link {
     color: black;
 }
 
-.container {}
+table {
+    border-collapse: collapse; /* For at ikke boksene ser ut som det er fra hverandre */
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid black;
+    text-align: left;
+    padding: 8px;
+}
 
 footer {
     background-color: orange;
