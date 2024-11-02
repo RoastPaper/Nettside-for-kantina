@@ -17,7 +17,7 @@ function menuFunction() {
 // Programmet under her gjør at du kan klikke hvor på nettsiden bortsatt fra menuen, av å klikke på nettsiden vil det lukkes. 
 document.addEventListener("click", function(event) {   // Laget en addEventListener for at brukeren kan klikke ved å taste inn 'click' og lage en ny funksjonen med event. 
     const dropdownEl = document.getElementById("dropdownID"); // Henter Id fra HTML.
-    const menuButton = document.querySelector(".menu"); // Henter element med en class = menu. 
+    const menuButton = document.getElementById("menu"); // Henter id fra HTML.
 
     if (menuOpen && !dropdownEl.contains(event.target) && !menuButton.contains(event.target)) { // En if funksjonen sjekker om det er true eller false for å lukke menuen.
         menuFunction();
