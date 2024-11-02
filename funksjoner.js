@@ -1,5 +1,3 @@
-let menuOpen = false // Viser at det menuOpen er false som betyr når det er lukket.
-
 function menuFunction() {
     const dropdownEl = document.getElementById("dropdownID");
     const mainEl = document.getElementById("main"); 
@@ -19,7 +17,11 @@ document.addEventListener("click", function(event) {   // Laget en addEventListe
     const dropdownEl = document.getElementById("dropdownID"); // Henter Id fra HTML.
     const menuButton = document.getElementById("menu"); // Henter id fra HTML.
 
-    if (menuOpen && !dropdownEl.contains(event.target) && !menuButton.contains(event.target)) { // En if funksjonen sjekker om det er true eller false for å lukke menuen.
+    if (menuOpen && !dropdownEl.contains(event.target) && !menuButton.contains(event.target)) { // En if funksjonen sjekker om det er true eller false for å lukke menuen eller åpne.
         menuFunction();
     }
 });
+
+const måltid = [
+    {name: "Kyllingwrap med salat og dressing", descripton: ""}
+]
