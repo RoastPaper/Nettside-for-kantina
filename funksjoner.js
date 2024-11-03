@@ -9,6 +9,7 @@ function menuFunction() {
         dropdownEl.style.width = "0"; // Gjør at width bli null som gjør at alt innhold bli borte.
         mainEl.style.marginLeft = "0";  // Gjør at området som er på main bli dyttet mot høyre når man klikker på knappen, men det er på 0 som gjør at det er normalt som css sier hva det skal gjøre.
         titleEl.style.marginLeft = "0"; // Samme som de forrige, men er på sdien uten å klikke på menuen.
+
     } else {
         dropdownEl.style.width = "220px"; // Her bygger det menyet når brukeren klikker på menuet knappen på toppen av venstre hver av sidene. 
         mainEl.style.marginLeft = "250px"; // Her dytter det som inneholder i bildet for hjemisden til høyre.
@@ -24,6 +25,35 @@ document.addEventListener("click", function(event) {   // Laget en addEventListe
 
     if (menuOpen && !dropdownEl.contains(event.target) && !menuButton.contains(event.target)) { // En if funksjonen sjekker om det er true eller false for å lukke menuen.
         menuFunction();
+    }
+});
+
+// Den nederste er for menye og kanskje også for varer.html hvis jeg trenger det.
+
+function tableFunction() {
+    const dropdown = document.getElementById("dropsideId");
+    const tableEl = document.getElementById("table");
+    const title = document.getElementById("titleid");
+
+    if (menuOpen) {
+        dropdown.style.width = "0";
+        title.style.marginLeft = "0";
+        tableEl.style.marginLeft = "50px";
+
+    } else {
+        dropdown.style.width = "220px";
+        title.style.marginLeft = "150px";
+        tableEl.style.marginLeft = "230px"; 
+    }
+    menuOpen = !menuOpen;
+}
+
+document.addEventListener("click", function(event) {   // Laget en addEventListener for at brukeren kan klikke ved å taste inn 'click' og lage en ny funksjonen med event. 
+    const dropdown = document.getElementById("dropsideId"); // Henter Id fra HTML.
+    const menubutton = document.getElementById("menuid"); // Henter id fra HTML.
+
+    if (menuOpen && !dropdown.contains(event.target) && !menubutton.contains(event.target)) { // En if funksjonen sjekker om det er true eller false for å lukke menuen.
+        tableFunction();
     }
 });
 

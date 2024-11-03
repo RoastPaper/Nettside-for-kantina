@@ -116,6 +116,14 @@ body {
 .article {
     margin: 50px;
     background-color: white;
+    transition: 0.5s;
+}
+
+.table {
+    margin: 50px;
+    margin-top: 70px;
+    background-color: white;
+    transition: 0.5s;
 }
 
 .article h2 {
