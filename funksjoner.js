@@ -3,13 +3,16 @@ let menuOpen = false; // Dette er for å sjekke om hovr menuet er lukket eller i
 function menuFunction() {
     const dropdownEl = document.getElementById("dropdownID");
     const mainEl = document.getElementById("main"); 
+    const titleEl = document.getElementById("title");
 
     if (menuOpen) { // Her er når menuet er lukket. Jeg har puttet menuOpen i paranteser for å si at det er koblet fra en tidligere variabel utenfor function som er lik false.
         dropdownEl.style.width = "0"; // Gjør at width bli null som gjør at alt innhold bli borte.
         mainEl.style.marginLeft = "0";  // Gjør at området som er på main bli dyttet mot høyre når man klikker på knappen, men det er på 0 som gjør at det er normalt som css sier hva det skal gjøre.
+        titleEl.style.marginLeft = "0"; // Samme som de forrige, men er på sdien uten å klikke på menuen.
     } else {
         dropdownEl.style.width = "220px"; // Her bygger det menyet når brukeren klikker på menuet knappen på toppen av venstre hver av sidene. 
         mainEl.style.marginLeft = "250px"; // Her dytter det som inneholder i bildet for hjemisden til høyre.
+        titleEl.style.marginLeft = "150px"; // Dytter frem og tilbake når klikker på menuen eller når går av menuet.
     }
     menuOpen = !menuOpen; // dette gjør at hvis menuOpen er true vil det bli motsatte som er false. Dette gjør vi når skal opne menuen for eksempel du klikker på det og de vil det bli true som betyr at det hopper over if og til else og kjører programmet. Da vil menuOpen = !menuOpen bli til true etter gjort if fuksjonene.
 }
