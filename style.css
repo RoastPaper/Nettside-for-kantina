@@ -4,6 +4,14 @@ body {
     background-color: #FFC37C;
 }
 
+.title {
+    position: absolute;
+    top: 0;
+    left: 80px;
+    color: #f1af5f;
+    transition: 0.5s;
+}
+
 .hero-image {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("bilder/green-goddess-sandwiches-healthy-lunch-recipes-6552ad3197eef.avif"); /* Her legger det er bilde i bakgrunnen til siden og jeg har puttet inn en mørk farge som gjøre at bilden blir mørkere. */
     background-repeat: repeat-x; /* Her gjør at bildet repteres seg ved x-aksen til sidene av bildet. */
@@ -12,7 +20,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative; /* Dette er viktig for knappen skal være toppen til venstre med hjelp av position: absolute i .buttonhover og for .meny-bakgrunn*/
+    position: relative; /* Dette er viktig for knappen skal være toppen til venstre med hjelp av position: absolute i .buttonhover og for .meny-bakgrunn. */
 }
 
 .meny-bakgrunn {
@@ -74,7 +82,7 @@ body {
 }
 
 #main { /* Dette gjør transformeringen smooth og ikke hakkete  */
-    transition: margin-left .5s;
+    transition: margin-left 0.5s;
     padding: 20px;
 }
 
