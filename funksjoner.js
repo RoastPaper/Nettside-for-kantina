@@ -48,15 +48,62 @@ function tableFunction() {
     menuOpen = !menuOpen;
 }
 
-document.addEventListener("click", function(event) {   // Laget en addEventListener for at brukeren kan klikke ved å taste inn 'click' og lage en ny funksjonen med event. 
-    const dropdown = document.getElementById("dropsideId"); // Henter Id fra HTML.
-    const menubutton = document.getElementById("menuid"); // Henter id fra HTML.
+document.addEventListener("click", function(event) { 
+    const dropdown = document.getElementById("dropsideId"); 
+    const menubutton = document.getElementById("menuid");
 
-    if (menuOpen && !dropdown.contains(event.target) && !menubutton.contains(event.target)) { // En if funksjonen sjekker om det er true eller false for å lukke menuen.
+    if (menuOpen && !dropdown.contains(event.target) && !menubutton.contains(event.target)) {
         tableFunction();
     }
 });
 
-const måltid = [
-    {name: "Kyllingwrap med salat og dressing", descripton: ""}
+
+// Funksjonen for å ha et random måltid for uke dagene fra mandag til fredag.
+
+const frokost = [ // Her listen for frokost. 
+    {navn1: "", beskrivelse1: "", pris1: "", bilder1: ""},
 ]
+
+function ukeFrokost() {
+    const måltid1El = document.querySelectorAll("#måltid1"); // Jeg har prøvd med getElementById, men fungerte ikke så jeg brute querySelectorAll som fungerte veldig bra.
+    const beskrivelse1El = document.querySelectorAll("#beskrivelse1");
+    const pris1El = document.querySelectorAll("#koster1");
+    const bilder1El = document.querySelectorAll("#bilder1");
+
+    for (let i = 0; i < måltid1El.length; i++) { // Her er for løkken i Javascript
+        const randomMåltid1 = frokost[Math.floor(Math.random() * frokost.length)];
+
+    måltid1El[i].innerText = randomMåltid1.navn1;
+    beskrivelse1El[i].innerText = randomMåltid1.beskrivelse1;
+    pris1El[i].innerText = randomMåltid1.pris1;
+    bilder1El[i].innerHTML = `<img src="${randomMåltid1.bilder1}" width="100px">`;
+    }
+}
+
+window.onload = ukeFrokost;
+
+
+
+
+const lunsj = [ // Her er listen for lunsj. Jeg bruker dette type Array som lagres objektene som bli laget i Arrayen, jeg bruke dette for å bruke mindre plass enn å lage for hvert av objektene en varibal.
+    {navn: "Kyllingwrap med salat og dressing", beskrivelse: "Den fantastiske kombinasjonen kylling, kremost, pesto og friske grønnsaker vil garantert få frem smil, tilleg med salat og dressing", pris: "100 kr", bilder: ""},
+]
+
+function ukeLunsj() {
+    const måltidEl = document.querySelectorAll("#måltid"); // Bruker querySelectorAll enn getElementById fordi jeg skal hente flere elementer som har id="måltid".
+    const beskrivelseEl = document.querySelectorAll("#beskrivelse");
+    const prisEl = document.querySelectorAll("#koster");
+    const bilderEl = document.querySelectorAll("#bilder");
+
+    for (let i = 0; i < måltidEl.length; i++) { // Her er for løkken i Javascript
+        const randomMåltid = lunsj[Math.floor(Math.random() * lunsj.length)]; // Her kobler jeg randomMåltif med lunsj ogog bruker math.random for en random number som er innefor lengden til lunsj. Jeg bruker Mat.floor for å gjør det til en hel tall.
+
+    måltidEl[i].innerHTML = randomMåltid.navn; // Her bruker jeg randomMåltid enn lunsj fordi jeg koblet det i for løkken. 
+    beskrivelseEl[i].innerHTML = randomMåltid.beskrivelse;
+    prisEl[i].innerHTML = randomMåltid.pris;
+    bilderEl[i].innerHTML = `<img src="${randomMåltid.bilder}" width="100px">`; //Her må jeg gjøre litt annerledes, ifølge en kilde jeg fant jeg kan bruke noe som er kalt Template Literals som gjør jeg kan bruke varabler og uttrykk dirkete inni strengen uten må bruke + tegn. For å lage et template literal må jeg bruke `´ og ${}.
+    }
+}
+console.log(ukeLunsj) // Tester alt fungeres om det skal
+
+window.onload = ukeLunsj; // Gjør at det loader nye ting på menyet når du klikker på linket eller refresher siden.
