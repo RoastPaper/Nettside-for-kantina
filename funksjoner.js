@@ -61,7 +61,26 @@ document.addEventListener("click", function(event) {
 // Funksjonen for å ha et random måltid for uke dagene fra mandag til fredag.
 
 const frokost = [ // Her listen for frokost. 
-    {navn1: "", beskrivelse1: "", pris1: "", bilder1: ""},
+    {navn: "Havregrøt med Banan og Kanel", beskrivelse: "Varm havregrøt laget med melk eller vann, toppet med skiver av banan og et dryss kanel for smak.", pris: "35kr", bilder: "bilder/IMG_1635.JPG"},
+    {navn: "Gresk Yoghurt med Bær og Honning", beskrivelse: "Kremet gresk yoghurt servert med friske bær og et snev av honning. Høyt proteininnhold og naturlig søtt.", pris: "40kr", bilder: ""},
+    {navn: "Smoothie med Frukt og Spinat", beskrivelse: "En sunn smoothie laget med banan, bær, spinat og yoghurt. En enkel måte å få i seg vitaminer på.", pris: "45kr", bilder: ""},
+    {navn: "Avokadotoast på Grovbrød", beskrivelse: "Ristet grovbrød med most avokado, toppet med tomatskiver og et dryss havsalt. Fyller godt og gir sunne fettsyrer.", pris: "45kr", bilder: ""},
+    {navn: "Chiapudding med Kokosmelk og Frukt", beskrivelse: "Chiakrøtter blandet med kokosmelk, servert med sesongens frukt. En god kilde til omega-3 fettsyrer.", pris: "40kr", bilder: ""},
+    {navn: "Fullkornsbagel med Kremost og Laks", beskrivelse: "Grov bagel med kremost og røkt laks, toppet med agurk og dill. Smakfull og mettende frokost.", pris: "55kr", bilder: "bilder/170803-Matpakke_122-920x535.webp"},
+    {navn: "Egg og Grønnsaksmuffins", beskrivelse: "Små muffins laget med egg, spinat, paprika og ost. Perfekt som en håndholdt frokost.", pris: "40kr", bilder: ""},
+    {navn: "Fruktsalat med Nøtter", beskrivelse: "En frisk blanding av epler, bananer, druer og appelsiner, toppet med hakkede nøtter for ekstra crunch.", pris: "35kr", bilder: ""},
+    {navn: "Omelett med Tomat og Fetaost", beskrivelse: "Lett omelett fylt med tomater, fetaost og urter. En god kilde til proteiner og sunne fettstoffer.", pris: "50kr", bilder: "bilder/php7netuk.jpg"},
+    {navn: "Granola med Melk eller Yoghurt", beskrivelse: "Hjemmelaget granola servert med melk eller yoghurt og friske bær. Energirik frokost.", pris: "40kr", bilder: ""},
+    {navn: "Proteinshake med Banan og Havre", beskrivelse: "En næringsrik shake laget med proteinpulver, banan, havregryn og melk. Perfekt for å starte dagen.", pris: "45kr", bilder: ""},
+    {navn: "Rugbrød med Hummus og Grønnsaker", beskrivelse: "Grovt rugbrød med hummus, agurk og gulrot. Lett og smakfull frokost med fiber.", pris: "40kr", bilder: ""},
+    {navn: "Müsli med Tørket Frukt og Nøtter", beskrivelse: "Müsli blandet med tørket frukt og nøtter, servert med melk eller yoghurt.", pris: "45kr", bilder: ""},
+    {navn: "Kyllingwrap med Salat og Avokado", beskrivelse: "Fullkornswrap fylt med grillet kylling, avokado og ferske grønnsaker. Praktisk og mettende.", pris: "60kr", bilder: "bilder/19-062-21x1x.jpg"},
+    {navn: "Havrepannekaker med Bær", beskrivelse: "Pannekaker laget med havremel, servert med friske bær og en klatt yoghurt. En sunn vri på frokost.", pris: "50kr", bilder: ""},
+    {navn: "Eggesalat på Grovbrød", beskrivelse: "Kremet eggesalat med hardkokte egg, majones og urter, servert på grovt brød.", pris: "45kr", bilder: ""},
+    {navn: "Kikertsalat med Tomat og Avokado", beskrivelse: "En frisk salat med kikerter, tomat, agurk, avokado og sitronsaft. Næringsrikt og mettende.", pris: "55kr", bilder: ""},
+    {navn: "Søtpotet- og Spinatsalat", beskrivelse: "Ovnsbakt søtpotet med spinat, fetaost og en sitronvinaigrette. En sunn og smakfull kombinasjon.", pris: "60kr", bilder: ""},
+    {navn: "Bananpannekaker", beskrivelse: "Pannekaker laget med most banan og egg, servert med bær. En sunnere pannekakeoppskrift.", pris: "40kr", bilder: "bilder/large.webp"},
+    {navn: "Kokosnøtt- og Havresmoothie", beskrivelse: "Smoothie laget med havregryn, kokosmelk, banan og litt honning. En god måte å få energi på.", pris: "45kr", bilder: ""}
 ]
 
 function ukeFrokost() {
@@ -73,20 +92,36 @@ function ukeFrokost() {
     for (let i = 0; i < måltid1El.length; i++) { // Her er for løkken i Javascript
         const randomMåltid1 = frokost[Math.floor(Math.random() * frokost.length)];
 
-    måltid1El[i].innerText = randomMåltid1.navn1;
-    beskrivelse1El[i].innerText = randomMåltid1.beskrivelse1;
-    pris1El[i].innerText = randomMåltid1.pris1;
-    bilder1El[i].innerHTML = `<img src="${randomMåltid1.bilder1}" width="100px">`;
+    måltid1El[i].innerHTML = randomMåltid1.navn;
+    beskrivelse1El[i].innerHTML = randomMåltid1.beskrivelse;
+    pris1El[i].innerHTML = randomMåltid1.pris;
+    bilder1El[i].innerHTML = `<img src="${randomMåltid1.bilder}" width="100px">`;
     }
 }
 
-window.onload = ukeFrokost;
-
-
-
+console.log(ukeFrokost)
 
 const lunsj = [ // Her er listen for lunsj. Jeg bruker dette type Array som lagres objektene som bli laget i Arrayen, jeg bruke dette for å bruke mindre plass enn å lage for hvert av objektene en varibal.
-    {navn: "Kyllingwrap med salat og dressing", beskrivelse: "Den fantastiske kombinasjonen kylling, kremost, pesto og friske grønnsaker vil garantert få frem smil, tilleg med salat og dressing", pris: "100 kr", bilder: ""},
+    {navn: "Kyllingwrap med salat og dressing", beskrivelse: "Den fantastiske kombinasjonen kylling, kremost, pesto og friske grønnsaker vil garantert få frem smil, tilleg med salat og dressing", pris: "100kr", bilder: "bilder/grillet-kylling-wraps-med-karridressing.webp"},
+    {navn: "Kyllingsalat med Fullkornspasta", beskrivelse: "Mettende salat med fullkornspasta, grillet kylling, friske grønnsaker som agurk, tomat, paprika, og en lett urtedressing.", pris: "70kr", bilder: ""},
+    {navn: "Falafelwrap med Hummus og Grønnsaker", beskrivelse: "Fullkornswrap fylt med falafel, hummus, salat, agurk og tomat. Et godt plantebasert alternativ.", pris: "55kr", bilder: ""},
+    {navn: "Pokébowl med Laks og Grønnsaker", beskrivelse: "Pokébowl med ris, rå laks, avokado, gulrot og edamamebønner, toppet med en sesamdressing.", pris: "75kr", bilder: ""},
+    {navn: "Fullkornsbagel med Kalkun og Ost", beskrivelse: "Grov bagel fylt med kalkun, salat, tomat, agurk og en skive ost. Mettende og proteinrik.", pris: "55kr", bilder: ""},
+    {navn: "Tacosalat med Bønner og Avokado", beskrivelse: "Salat med krydrede bønner, mais, tomat, salatblader, avokado og en liten klatt rømme på toppen.", pris: "65kr", bilder: "bilder/1-05-IMG_5387.jpg"},
+    {navn: "Søtpotet- og Kikertebowl", beskrivelse: "Varm bowl med ovnsbakt søtpotet, kikerter, quinoa, og spinat, toppet med en tahinidressing.", pris: "70kr", bilder: ""},
+    {navn: "Tunfisksalat med Egg og Grønnsaker", beskrivelse: "Blandede grønnsaker, tunfisk, kokt egg, mais og cherrytomater. Lett, proteinrik og full av smak.", pris: "65kr", bilder: ""},
+    {navn: "Vegetarbowl med Quinoa og Grønnsaker", beskrivelse: "En blanding av quinoa, agurk, tomat, paprika, fetaost og en sitronvinaigrette. Full av fiber og protein.", pris: "60kr", bilder: ""},
+    {navn: "Grovt Smørbrød med Avokado og Eggerøre", beskrivelse: "Ristet fullkornsbrød med most avokado og en porsjon eggerøre på toppen. Sunt fett og proteiner.", pris: "45kr", bilder: "bilder/Avokado-toast-med-smilende-egg-no026153_2021-03-09-081457.jpg"},
+    {navn: "Linse- og Grønnsaksuppe", beskrivelse: "En varmende suppe laget med linser, gulrøtter, tomater og krydder. Perfekt på kalde dager.", pris: "50kr", bilder: ""},
+    {navn: "Kylling- og Grønnsakssuppe", beskrivelse: "Kyllingsuppe med ferske grønnsaker som gulrot, selleri og poteter. Lett og smakfull.", pris: "50kr", bilder: ""},
+    {navn: "Egg- og Spinatomelett", beskrivelse: "Omelett med spinat og tomater, servert med en skive grovt brød. Full av proteiner og vitaminer.", pris: "50kr", bilder: ""},
+    {navn: "Fullkornsbaguette med Mozzarella og Tomat", beskrivelse: "Fullkornsbaguette fylt med mozzarella, tomat, basilikum og en dråpe balsamico.", pris: "55kr", bilder: ""},
+    {navn: "Sushi-meny med Grønnsaker og Laks", beskrivelse: "En liten porsjon sushi med maki- og nigiriruller fylt med laks og grønnsaker. Lett og mettende.", pris: "70kr", bilder: "bilder/premium-sushi-fra-meny.jpeg"},
+    {navn: "Grillet Grønnsakssandwich på Grovbrød", beskrivelse: "Sandwich med grillet paprika, aubergine, squash og litt pesto. Smaksrik og fiberrik.", pris: "55kr", bilder: ""},
+    {navn: "Bulgursalat med Grillet Kylling", beskrivelse: "Bulgur med grillet kylling, grønnsaker og en urtedressing. Et sunt alternativ med mye fiber.", pris: "65kr", bilder: ""},
+    {navn: "Tofu-salat med Grønnsaker og Sesamfrø", beskrivelse: "Salat med tofu, blandede grønnsaker og sesamfrø, toppet med en lett soya- og ingefærsaus.", pris: "60kr", bilder: ""},
+    {navn: "Kikertwrap med Grønnsaker og Hummus", beskrivelse: "Fullkornswrap med hummus, krydrede kikerter, tomat og salat. Smakfull og mettende.", pris: "55kr", bilder: ""},
+    {navn: "Ratatouille med Fullkornris", beskrivelse: "En grønnsaksrett laget med paprika, aubergine og squash i en tomatsaus, servert med fullkornris.", pris: "65kr", bilder: ""}
 ]
 
 function ukeLunsj() {
@@ -106,4 +141,6 @@ function ukeLunsj() {
 }
 console.log(ukeLunsj) // Tester alt fungeres om det skal
 
-window.onload = ukeLunsj; // Gjør at det loader nye ting på menyet når du klikker på linket eller refresher siden.
+window.onload = ukeFrokost();
+
+window.onload = ukeLunsj(); // Gjør at det loader nye ting på menyet når du klikker på linket eller refresher siden.
