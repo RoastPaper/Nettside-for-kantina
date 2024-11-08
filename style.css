@@ -121,7 +121,7 @@ body {
 
 .table {
     margin: 50px;
-    margin-top: 70px;
+    margin-top: 80px;
     background-color: white;
     transition: 0.5s;
 }
@@ -163,6 +163,14 @@ td, th {
     border: 1px solid black;
     text-align: left;
     padding: 8px;
+}
+
+@media screen and (max-height: 450px) {  
+    .table {margin: 25px;}
+    table {margin: 25px;}
+    table {margin-top: 25px;}
+    td {font-size: 18px;}
+    th {font-size: 18px;}
 }
 
 footer {
