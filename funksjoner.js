@@ -15,7 +15,7 @@ function menuFunction() {
         mainEl.style.marginLeft = "250px"; // Her dytter det som inneholder i bildet for hjemisden til høyre.
         titleEl.style.marginLeft = "150px"; // Dytter frem og tilbake når klikker på menuen eller når går av menuet.
     }
-    menuOpen = !menuOpen; // dette gjør at hvis menuOpen er true vil det bli motsatte som er false. Dette gjør vi når skal opne menuen for eksempel du klikker på det og de vil det bli true som betyr at det hopper over if og til else og kjører programmet. Da vil menuOpen = !menuOpen bli til true etter gjort if fuksjonene.
+    menuOpen = !menuOpen; // dette gjør at hvis menuOpen er true vil det bli motsatte som er false. Dette gjør vi når skal åpne menuen for eksempel du klikker på det og de vil det bli true som betyr at det hopper over if og til else og kjører programmet. Da vil menuOpen = !menuOpen bli til true etter gjort if fuksjonene.
 }
 
 // Programmet under her gjør at du kan klikke hvor på nettsiden bortsatt fra menuen, av å klikke på nettsiden vil det lukkes. 

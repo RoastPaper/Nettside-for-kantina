@@ -46,4 +46,4 @@ ___
 
 Ellers var det alt jeg trengte å viser hva du trenger å vite.
 
-- [ ] Ferdig
+- [x] Ferdig
