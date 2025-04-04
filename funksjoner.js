@@ -94,7 +94,7 @@ function ukeFrokost() {
 
     måltid1El[i].innerHTML = randomMåltid1.navn;
     beskrivelse1El[i].innerHTML = randomMåltid1.beskrivelse;
-    pris1El[i].innerHTML = randomMåltid1.pris;
+    pris1El[i].innerHTML = randomMåltid1.pris + "kr";
 
 // Jeg fikk hjelp med ChatGPT:
     const buyButton1 = document.createElement("button");
@@ -117,13 +117,6 @@ function buyProduct1(product) {
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: data
     })
-    .then(response => response.text())
-    .then(result => {
-        alert("Kjøpet er registrert: " + result);
-    })
-    .catch(error => {
-        console.error("Feil ved kjøp:", error);
-    });
 }
 
 console.log(ukeFrokost)
@@ -162,7 +155,7 @@ function ukeLunsj() {
 
     måltidEl[i].innerHTML = randomMåltid.navn; // Her bruker jeg randomMåltid enn lunsj fordi jeg koblet det i for løkken. 
     beskrivelseEl[i].innerHTML = randomMåltid.beskrivelse;
-    prisEl[i].innerHTML = randomMåltid.pris;
+    prisEl[i].innerHTML = randomMåltid.pris + "kr";
     const buyButton = document.createElement("button");
     buyButton.textContent = "Kjøp";
     buyButton.addEventListener("click", function() {
@@ -183,13 +176,6 @@ function buyProduct(product) {
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: data
     })
-    .then(response => response.text())
-    .then(result => {
-        alert("Kjøpet er registrert: " + result);
-    })
-    .catch(error => {
-        console.error("Feil ved kjøp:", error);
-    });
 }
 console.log(ukeLunsj) // Tester alt fungeres om det skal
 
