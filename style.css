@@ -111,6 +111,14 @@ body {
     font-size: 30px;
 }
 
+.account {
+    margin: 40px;
+    text-align: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
 .hero-text {
     color: white;
     font-size: 40px;
@@ -129,6 +137,7 @@ body {
 .article {
     margin: 50px;
     background-color: white;
+    border-radius: 10px;
     transition: 0.5s;
 }
 
@@ -192,4 +201,10 @@ footer {
     font-size: 20px;
     padding: 10px;
     text-align: center;
+}
+
+.menynede a {
+    color:#ffffff;
+    padding: 10px;
+    font-size: 30px;
 }

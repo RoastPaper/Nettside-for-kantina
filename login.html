@@ -7,6 +7,61 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <header>
+        <div id="main">
+        </div>
+        <menu>
+            <div class="menu" id="menu" onclick="menuFunction()">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+            <div class="title" id="title">
+                <h1>Varer</h1>
+            </div>
+            <div id="dropdownID" class="dropdown">
+                <img src="bilder/akademiet_oransje_rgb-1000x398.png" width="175px">
+                <a href="index.html">Hjem</a>
+                <a href="meny.html">Meny</a>
+                <a href="varer.html">Varer</a>
+            </div>
+        </menu>
+        <login class="login">
+            <a href="login.html">Login</a>
+            <a href="register.html">Register</a>
+        </login>
+    </header>
+    <div class="account">
+        <div>
+            <h1>Login</h1>
+        </div>
+        <form action="login.php" method="post">
+            <label for="username">Username:</label> <br>
+            <input type="text" name="username" placeholder="Username" id="username" required>
+            <br> <br>
+            <label for="password">Password</label>
+            <br>
+            <input type="password" name="password" placeholder="Password" id="password" required>
+            <br> <br>
+            <input type="submit" value="Login">
+            <br>
+            <div>
+                <a href="register.html">Har du ikke en konto?</a>
+            </div>
+    </div>
+    <footer>
+        <div>
+            <h2>Kontakt oss:</h2>
+            <p>Gmail: william.haaje@gmail.com</p>
+            <p>Telefon: 41072972</p>
+        </div>
+        <div class="menynede">
+            <h2>Lenkene til sidene:</h2>
+            <a href="index.html">Hjemsiden</a>
+            <a href="meny.html">Meny</a>
+            <a href="varer.html">Varer</a>
+        </div>
+    </footer>
+    <script src="funksjoner.js"></script>
 </body>
 </html>
