@@ -5,10 +5,12 @@ $username = trim($_POST['username']);
 $password = trim($_POST['password']);
 $email = trim($_POST['email']);
 
+
+
 $day = intval($_POST['day']);
 $month = intval($_POST['month']);
 $year = intval($_POST['year']);
-$date = sprintf("%04d-$02d-%02d", $year, $month, $day);
+$date = sprintf("%04d-%02d-%02d", $year, $month, $day);
 
 $con = mysqli_connect($DATABASE_HOST, $DATABASE_USER, $DATABASE_PASS, $DATABASE_NAME);
 if (mysqli_connect_errno()) {
@@ -23,7 +25,8 @@ if ($stmt = $con->prepare('SELECT id, password FROM Account WHERE username = ?')
         echo 'Brukernavnet finnes allerede';
     } else {
         $stmt = $con->prepare('INSERT INTO Account (username, password, email, date) VALUES (?, ?, ?, ?)');
-        $stmt->bind_param('ssss', $username, $password, $email, $date);
+        $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
+        $stmt->bind_param('ssss', $username, $hashedPassword, $email, $date);
         $stmt->execute();
         $stmt->close();
     }
