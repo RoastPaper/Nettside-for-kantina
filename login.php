@@ -1,4 +1,5 @@
 <?php
+session_start();
 require_once('/var/www/william_domain/mysql.php');
 
 $username = trim($_POST['username']);
