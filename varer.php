@@ -35,7 +35,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
             </div>
         </menu>
         <login class="login">
-            <a href="login.html">Logout</a>
+            <a href="logout.php">Logout</a>
         </login>
     </header>
     <article class="article">

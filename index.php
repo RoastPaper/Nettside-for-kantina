@@ -36,6 +36,9 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
                     <a href="varer.php">Varer</a>
                 </div>
             </menu>
+            <login class="login">
+                <a href="logout.php">Logout</a>
+            </login>
             <div class="hero-text">
                 <h1>Akatina</h1>
                 <p>Hei, og velkommen til Akademiets kantine</p>
