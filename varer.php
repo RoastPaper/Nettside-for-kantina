@@ -1,0 +1,106 @@
+<?php
+session_start();
+
+if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
+    header('Location: index.html');
+    exit;
+}
+require_once('/var/www/william_domain/mysql.php');
+
+$con = mysqli_connect($DATABASE_HOST, $DATABASE_USER, $DATABASE_PASS, $DATABASE_NAME);
+if (mysqli_connect_errno()) {
+    exit('Failed to connect to MySQL: ' . mysqli_connect_error());
+}
+?>
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nettside for kantina</title>
+    <link rel="stylesheet" href="style.css"> <!-- Her har jeg koblet til CSS for at programet koble sammen med HTML -->
+</head>
+<body>
+    <header>
+        <div id="main">
+        </div>
+        <menu>
+            <div class="menu" id="menu" onclick="menuFunction()">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+            <div class="title" id="title">
+                <h1>Varer</h1>
+            </div>
+            <div id="dropdownID" class="dropdown">
+                <img src="bilder/akademiet_oransje_rgb-1000x398.png" width="175px">
+                <a href="index.html">Hjem</a>
+                <a href="meny.html">Meny</a>
+                <a href="varer.html">Varer</a>
+            </div>
+        </menu>
+        <login class="login">
+            <a href="login.html">Logout</a>
+        </login>
+    </header>
+    <article class="article">
+        <div>
+            <p>Her kan du velge de ulike varene som du kan spise med måltiden du har valgt. Her kan du velge fra drikke til yougurt som du kan har til siden eller spiser noe enkelt</p>
+            <table>
+                <tr>
+                    <th>Varer</th>
+                    <th>Beskrivelse</th>
+                    <th>Pris</th>
+                    <th>Bilder</th>
+                </tr>
+                <tr>
+                    <td>Sjokolade melk</td>
+                    <td>Litago sjokolade melk fra Tine</td>
+                    <td>40kr</td>
+                    <td><img src="bilder/litago-sjokolademelk.jpg" alt="Sjokolade melk" width="100px"></td>
+                </tr>
+                <tr>
+                    <td>Brødvarer med pålegg</td>
+                    <td>Brød fra grovt til glutenfri, med forskjellige typer pålegg fra kaviar til makrell</td>
+                    <td>10kr per stykk</td>
+                    <td><img src="bilder/Rema-1000-januar-Brodskiver.jpg" alt="Børdvarer med pålegg" width="100px"></td>
+                </tr>
+                <tr>
+                    <td>Yoghurt</td>
+                    <td>Vi har forskjellige typer av yougurt fra jordbær til blåbær fra Tine.</td>
+                    <td>30kr</td>
+                    <td><img src="bilder/7038010009457-2.png.webp" alt="Yoghurt" width="100px"></td>
+                </tr>
+                <tr>
+                    <td>Frokostblanding</td>
+                    <td>Vi har forskjellige typer av frokostblanding som er i småe bokser som du kan ha med melk.</td>
+                    <td>20kr</td>
+                    <td><img src="bilder/frokostblanding-erikhelgeneset.webp" alt="Frokostblanding" width="100px"></td>
+                </tr>
+                <tr>
+                    <td>Forskjellige typer av juice</td>
+                    <td>For drikke kan du skaffe deg eplejuice til appelsinjuice</td>
+                    <td>10kr</td>
+                    <td><img src="bilder/tine_handel_artnr_4363__large.png" alt="Juice" width="100px"></td>
+                </tr>
+            </table>
+        </div>
+    </article>
+    <footer>
+        <div>
+            <h2>Kontakt oss:</h2>
+            <p>Gmail: william.haaje@gmail.com</p>
+            <p>Telefon: 41072972</p>
+        </div>
+        <div class="menynede">
+            <h2>Lenkene til sidene:</h2>
+            <a href="index.html">Hjemsiden</a>
+            <a href="meny.html">Meny</a>
+            <a href="varer.html">Varer</a>
+        </div>
+    </footer>
+
+    <script src="funksjoner.js"></script> <!-- Her har jeg koblet til Javascript for at programet koble sammen med HTML -->
+</body>
+</html>
