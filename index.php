@@ -1,4 +1,5 @@
 <?php
+session_start();
 if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
     header('Location: index.html');
     exit;
@@ -35,14 +36,11 @@ if (mysqli_connect_errno()) {
                 </div>
                 <div id="dropdownID" class="dropdown">
                     <img src="bilder/akademiet_oransje_rgb-1000x398.png" width="175px">
-                    <a href="index.html">Hjem</a>
-                    <a href="meny.html">Meny</a>
-                    <a href="varer.html">Varer</a>
+                    <a href="index.php">Hjem</a>
+                    <a href="meny.php">Meny</a>
+                    <a href="varer.php">Varer</a>
                 </div>
             </menu>
-            <login class="login">
-                <a href="login.html">Logout</a>
-            </login>
             <div class="hero-text">
                 <h1>Akatina</h1>
                 <p>Hei, og velkommen til Akademiets kantine</p>
@@ -74,9 +72,9 @@ if (mysqli_connect_errno()) {
         </div>
         <div class="menynede">
             <h2>Lenkene til sidene:</h2>
-            <a href="index.html">Hjemsiden</a>
-            <a href="meny.html">Meny</a>
-            <a href="varer.html">Varer</a>
+            <a href="index.php">Hjemsiden</a>
+            <a href="meny.php">Meny</a>
+            <a href="varer.php">Varer</a>
         </div>
     </footer>
 
