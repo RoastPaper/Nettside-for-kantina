@@ -8,7 +8,7 @@ body {
     position: absolute;
     top: 0;
     left: 80px;
-    color: #f1af5f;
+    color: #f79012;
     transition: 0.5s;
 }
 
@@ -40,7 +40,7 @@ body {
 .bar1, .bar2, .bar3 { /* Dette lager tre strekker på toppen til venstre har en transition som gj */
     width: 35px;
     height: 5px;
-    background-color: #f1af5f;
+    background-color: #f79012;
     margin: 8px;
     transition: 0.4s;
 }
@@ -96,6 +96,19 @@ body {
 .buttonhover:hover {  
     background-color: #FFC37C;
     color: white;
+}
+
+.login {
+    position: absolute;
+    top: 20px;
+    right: 10px;
+}
+
+.login a {
+    color:#f79012;
+    text-decoration: none;
+    padding: 10px;
+    font-size: 30px;
 }
 
 .hero-text {
