@@ -32,6 +32,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
                 <a href="index.html">Hjem</a>
                 <a href="meny.html">Meny</a>
                 <a href="varer.html">Varer</a>
+                <a href="betal.php">Handelkurv</a>
             </div>
         </menu>
         <login class="login">
