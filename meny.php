@@ -16,6 +16,8 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
 </head>
 <body>
     <header>
+        <div id="main">
+        </div>
         <menu>
             <div class="menu" id="menuid" onclick="tableFunction()">
                 <div class="bar1"></div>
@@ -37,60 +39,60 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
             <a href="logout.php">Logout</a>
         </login>
     </header>
+    <br>
     <article class="table" id="table">
-        <form action="handelkurv.php" method="post">
-            <table>
-                <tr>
-                    <th>Dag</th>
-                    <th>Måltid</th>
-                    <th>Beskrivelse</th>
-                    <th>Pris</th>
-                    <th>Bilder</th>
-                </tr>
-                <tr>
-                    <td>Mandag</td>
-                    <td>
-                        <h3>For frokost kan du velge fra disse alterativene:</h3> <br>
-                        <div id="måltid1"></div><br>
-                        <div id="måltid1"></div> <br>
-                        <div id="måltid1"></div> <br>
-                        <h3>For lunsj kan du velge fra disse alterativene: </h3> <br>
-                        <div id="måltid"></div> <br>
-                        <div id="måltid"></div> <br>
-                        <div id="måltid"></div>
-                    </td>
-                    <td>
-                        <h3>Beskrivele for frokost:</h3> <br>
-                        <div id="beskrivelse1"></div> <br>
-                        <div id="beskrivelse1"></div> <br>
-                        <div id="beskrivelse1"></div> <br>
-                        <h3>Beskrivelse for lunsj:</h3> <br>
-                        <div id="beskrivelse"></div> <br>
-                        <div id="beskrivelse"></div> <br>
-                        <div id="beskrivelse"></div>
-                    </td>
-                    <td>
-                        <h3>Prisene for frokost:</h3> <br>
-                        <div id="koster1"></div><br>
-                        <div id="koster1"></div><br>
-                        <div id="koster1"></div><br>
-                        <h3>Prisene for frokost:</h3> <br>
-                        <div id="koster"></div><br>
-                        <div id="koster"></div><br>
-                        <div id="koster"></div>
-                    </td>
-                    <td>
-                        <h3>Populærer bilder for frokost:</h3> <br>
-                        <div id="bilder1"></div> 
-                        <div id="bilder1"></div>
-                        <div id="bilder1"></div>
-                        <h3>Populærer bilder for lunsj:</h3> <br>
-                        <div id="bilder"></div> 
-                        <div id="bilder"></div>
-                        <div id="bilder"></div>
-                    </td>
-                </tr>
-                <tr>
+       <table>
+        <tr>
+            <th>Dag</th>
+            <th>Måltid</th>
+            <th>Beskrivelse</th>
+            <th>Pris</th>
+            <th>Bilder</th>
+        </tr>
+        <tr>
+            <td>Mandag</td>
+            <td>
+                <h3>For frokost kan du velge fra disse alterativene:</h3> <br>
+                <div id="måltid1"></div> <br>
+                <div id="måltid1"></div> <br>
+                <div id="måltid1"></div> <br>
+                <h3>For lunsj kan du velge fra disse alterativene: </h3> <br>
+                <div id="måltid"></div> <br>
+                <div id="måltid"></div> <br>
+                <div id="måltid"></div>
+            </td>
+            <td>
+                <h3>Beskrivele for frokost:</h3> <br>
+                <div id="beskrivelse1"></div> <br>
+                <div id="beskrivelse1"></div> <br>
+                <div id="beskrivelse1"></div> <br>
+                <h3>Beskrivelse for lunsj:</h3> <br>
+                <div id="beskrivelse"></div> <br>
+                <div id="beskrivelse"></div> <br>
+                <div id="beskrivelse"></div>
+            </td>
+            <td>
+                <h3>Prisene for frokost:</h3> <br>
+                <div id="koster1"></div> <br>
+                <div id="koster1"></div> <br>
+                <div id="koster1"></div> <br>
+                <h3>Prisene for frokost:</h3> <br>
+                <div id="koster"></div> <br>
+                <div id="koster"></div> <br>
+                <div id="koster"></div>
+            </td>
+            <td>
+                <h3>Populærer bilder for frokost:</h3> <br>
+                <div id="bilder1"></div> 
+                <div id="bilder1"></div>
+                <div id="bilder1"></div>
+                <h3>Populærer bilder for lunsj:</h3> <br>
+                <div id="bilder"></div> 
+                <div id="bilder"></div>
+                <div id="bilder"></div>
+            </td>
+        </tr>
+        <tr>
             <td>Tirsdag</td>
             <td>
                 <h3>For frokost kan du velge fra disse alterativene:</h3> <br>
@@ -200,12 +202,12 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
             </td>
             <td>
                 <h3>Prisene for frokost:</h3> <br>
-                <div id="koster1"></div><br>
-                <div id="koster1"></div><br>
-                <div id="koster1"></div><br>
+                <div id="koster1"></div> <br>
+                <div id="koster1"></div> <br>
+                <div id="koster1"></div> <br>
                 <h3>Prisene for lunsj:</h3> <br>
-                <div id="koster"></div><br>
-                <div id="koster"></div><br>
+                <div id="koster"></div> <br>
+                <div id="koster"></div> <br>
                 <div id="koster"></div>
             </td>
             <td>
@@ -263,7 +265,6 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
             </td>
         </tr>
        </table>
-    </form>
     </article>
     <footer>
         <div>

@@ -39,6 +39,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
             <a href="logout.php">Logout</a>
         </login>
     </header>
+    <br>
     <article class="article">
         <div>
             <p>Her kan du velge de ulike varene som du kan spise med måltiden du har valgt. Her kan du velge fra drikke til yougurt som du kan har til siden eller spiser noe enkelt</p>

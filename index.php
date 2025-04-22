@@ -47,6 +47,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
         </div>
         <img src="bilder/Toppen for nettsiden.png" width="1440" class="nederst-bakgrunn">
     </header>
+    <br>
     <article class="article">
         <h2>Hvem er vi</h2>
         <p>Vi på Akademiet har oprrettet en kantine her på skolen. Du kan finner oss på tredje etasje til venstre. </p>
